@@ -1,4 +1,7 @@
-declare function fb_memcopy cdecl (byref dst as any,byref src as any,byval bytes as uinteger)as any ptr
+#inclib "mems"
+extern "C"
+	declare function memcopy cdecl(byref dst as any,byref src as any,byval bytes as uinteger)as any ptr
+end extern 
 screenres 300,200,8
 dim y as integer
 dim x as integer
@@ -24,9 +27,9 @@ dim pixels2 as any ptr
 			row[x]=x
 		next
 	next
-	row=pixels+1*picth
-	row2=pixels2+1*picth2
-	fb_memcopy(row2,row,64*64)
+	row=pixels
+	row2=pixels2
+	memcopy(row2,row,64*64)
 put(10,10),image
 put(10,100),image2
 imagedestroy(image)
