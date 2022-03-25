@@ -64,6 +64,7 @@ char bcolor;
 };
 void endX(int fbfd);
 int startX(char *c);
+void frees(void *img);
 void igputc(int *dc,int x,int y,char r,char g,char b,char c);
 void igputs(int *dc,int x,int y,char r,char g,char b,char *c);
 void irectangle(int x,int y,int x2,int y2,int *dc,char r,char g,char b);
@@ -6646,5 +6647,7 @@ xx=xx+8;
 ii++;
 }
 }
-
+void frees(void *img){
+	if(img!=NULL)free(img);
+}
 

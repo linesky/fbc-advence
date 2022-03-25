@@ -46,5 +46,9 @@ extern "C"
 	declare sub ball cdecl alias "ball"(x as integer,y as integer,rr as integer,r as integer,g as integer,b as integer)
 	declare sub grids cdecl alias "grid"(byval c as control,steeps as integer ,r as integer ,g as integer,b as integer)
 	declare sub rectangle cdecl(x as integer,y as integer,x2 as integer,y2 as integer,r as integer,g as integer,b as integer)
-	declare sub gputs(x as integer,y as integer,r as integer,g as integer,b as integer,c as zstring ptr)
+	declare sub gputs cdecl(x as integer,y as integer,r as integer,g as integer,b as integer,c as zstring ptr)
+	declare function creatImage cdecl(w as integer,h as integer)as integer ptr
+	declare sub iboxs cdecl(x as integer,y as integer,x2 as integer,y2 as integer,img as integer ptr,r as integer,g as integer,b as integer)
+	declare sub putImage cdecl(x as integer,y as integer,img as integer ptr)
+	declare sub frees cdecl(img as any ptr)
 end extern
