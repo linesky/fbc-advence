@@ -5866,7 +5866,7 @@ line(x,y,x1,y1,rcc,gcc,bcc);
 }
 
 int *creatImage(int w,int h){
-int *bytes=(int *) malloc((w)*(h)*sizeof(int)+sizeof(int)*4);
+int *bytes=(int *) malloc((w)*(h)*sizeof(int)+59);
 bytes[0]=w;
 bytes[1]=h;
 bytes[2]=32;
