@@ -62,6 +62,8 @@ char caption[100];
 char color;
 char bcolor;
 };
+int getwscr();
+int gethscr();
 void endX(int fbfd);
 int startX(char *c);
 void frees(void *img);
@@ -5256,9 +5258,15 @@ unsigned char font8x8[FONTDATAMAX] = {
 
 
 
-
+int getwscr(){
+	return vinfo.xres;
+}
+int gethscr(){
+	return vinfo.yres;
+}
 
 int startX(char *c){
+	
 int fbfd = open("/dev/fb0", O_RDWR);
 ioctl(fbfd, FBIOGET_FSCREENINFO, &finfo);
 ioctl(fbfd, FBIOGET_VSCREENINFO, &vinfo);
