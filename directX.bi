@@ -55,4 +55,6 @@ extern "C"
 	declare sub iline  cdecl alias "iline"(x as integer,y as integer,x2 as integer,y2 as integer,img as integer ptr,r as integer,g as integer,b as integer)
 	declare sub icircle cdecl alias "icircle"(x as integer,y as integer,rr as integer,img as integer ptr,r as integer,g as integer,b as integer)
 	declare sub iball cdecl alias "iball"(x as integer,y as integer,rr as integer,img as integer ptr,r as integer,g as integer,b as integer)
+	declare sub igputs cdecl(dc as integer ptr, x as integer,y as integer,r as integer,g as integer,b as integer,c as zstring ptr)
+	
 end extern
