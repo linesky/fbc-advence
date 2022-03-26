@@ -56,5 +56,5 @@ extern "C"
 	declare sub icircle cdecl alias "icircle"(x as integer,y as integer,rr as integer,img as integer ptr,r as integer,g as integer,b as integer)
 	declare sub iball cdecl alias "iball"(x as integer,y as integer,rr as integer,img as integer ptr,r as integer,g as integer,b as integer)
 	declare sub igputs cdecl(dc as integer ptr, x as integer,y as integer,r as integer,g as integer,b as integer,c as zstring ptr)
-	
+	declare sub IputImage cdecl(x as integer,y as integer,img as integer ptr,img2 as integer ptr)
 end extern
