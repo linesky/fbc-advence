@@ -59,4 +59,5 @@ extern "C"
 	declare sub IputImage cdecl(x as integer,y as integer,img as integer ptr,img2 as integer ptr)
 	declare function getwscr cdecl()as integer
 	declare function gethscr cdecl()as integer
+	declare sub irectangle cdecl(x as integer,y as integer,x2 as integer,y2 as integer,img as integer ptr,r as integer,g as integer,b as integer)
 end extern
