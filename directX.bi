@@ -61,4 +61,5 @@ extern "C"
 	declare function gethscr cdecl()as integer
 	declare sub irectangle cdecl(x as integer,y as integer,x2 as integer,y2 as integer,img as integer ptr,r as integer,g as integer,b as integer)
 	declare sub copyImage cdecl(x as integer,y as integer,img as integer ptr)
+	declare sub fillPolygan cdecl alias "fillPolygan"(x as integer,y as integer,rr as integer,division as integer, r as integer,g as integer,b as integer)
 end extern
